@@ -20,5 +20,19 @@ spec:
         resources:
           requests:
             cpu: 4m
-
+    api:
+      containers:
+        resources:
+          requests:
+            cpu: 4m
+    web:
+      containers:
+        resources:
+          requests:
+            cpu: 4m
+    metricsScraper:
+      containers:
+        resources:
+          requests:
+            cpu: 4m
 
