@@ -1,0 +1,22 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: my-dashboard
+  namespace: dashboard
+spec:
+  chart:
+    spec:
+      chart: kubernetes-dashboard
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: kubernetes-dashboard
+      version: 7.14.0
+  interval: 1m0s
+  # values:
+  #   replicaCount: 3
+  #   resources:
+  #     requests:
+  #       cpu: 3m
+
