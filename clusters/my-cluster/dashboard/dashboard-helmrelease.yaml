@@ -14,9 +14,11 @@ spec:
         name: kubernetes-dashboard
       version: 7.14.0
   interval: 1m0s
-  # values:
-  #   replicaCount: 3
-  #   resources:
-  #     requests:
-  #       cpu: 3m
+  values:
+    auth:
+      containers:
+        resources:
+          requests:
+            cpu: 4m
+
 
