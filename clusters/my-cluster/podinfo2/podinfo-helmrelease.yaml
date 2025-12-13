@@ -14,3 +14,5 @@ spec:
         name: podinfo
       version: 6.9.4
   interval: 1m0s
+  values:
+    replicaCount: 8
