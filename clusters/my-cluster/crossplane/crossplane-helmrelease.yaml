@@ -1,0 +1,23 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: my-crossplane
+  namespace: crossplane
+spec:
+  chart:
+    spec:
+      chart: crossplane
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: crossplane-stable
+  interval: 1m0s
+  values:
+    resourcesCrossplane:
+      requests::
+        cpu: 7m
+    resourcesRBACManager:
+      requests::
+        cpu: 7m
+

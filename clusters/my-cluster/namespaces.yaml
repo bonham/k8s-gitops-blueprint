@@ -11,3 +11,10 @@ metadata:
   name: dashboard
   labels:
     name: dashboard
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: crossplane
+  labels:
+    name: crossplane
