@@ -15,9 +15,9 @@ spec:
   interval: 1m0s
   values:
     resourcesCrossplane:
-      requests::
+      requests:
         cpu: 7m
     resourcesRBACManager:
-      requests::
+      requests:
         cpu: 7m
 
