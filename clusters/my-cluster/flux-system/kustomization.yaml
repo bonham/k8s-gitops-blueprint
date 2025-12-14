@@ -19,4 +19,4 @@ patches:
                     cpu: 44m
     target:
       kind: Deployment
-      name: "(kustomize-controller|helm-controller|source-controller)"
+      name: "(kustomize-controller|helm-controller|source-controller|notification-controller)"
