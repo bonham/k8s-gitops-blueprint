@@ -12,5 +12,4 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: prometheus-community
-      version: 7.14.0
   interval: 1h
