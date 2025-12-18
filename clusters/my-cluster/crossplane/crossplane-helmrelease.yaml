@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: crossplane-stable
-  interval: 1m0s
+  interval: 1h
   values:
     resourcesCrossplane:
       requests:

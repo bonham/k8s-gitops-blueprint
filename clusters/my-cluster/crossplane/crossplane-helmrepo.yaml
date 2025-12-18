@@ -5,5 +5,5 @@ metadata:
   name: crossplane-stable
   namespace: crossplane
 spec:
-  interval: 1m0s
+  interval: 1h
   url: https://charts.crossplane.io/stable
