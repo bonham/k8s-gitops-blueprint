@@ -1,13 +1,13 @@
-# second-user-rolebinding.yaml
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: second-user-admin-bob
-subjects:
-- kind: User
-  name: bob   # must match CN in the cert
-  apiGroup: rbac.authorization.k8s.io
-roleRef:
-  kind: ClusterRole
-  name: cluster-admin
-  apiGroup: rbac.authorization.k8s.io
+# # second-user-rolebinding.yaml
+# apiVersion: rbac.authorization.k8s.io/v1
+# kind: ClusterRoleBinding
+# metadata:
+#   name: second-user-admin-bob
+# subjects:
+# - kind: User
+#   name: bob   # must match CN in the cert
+#   apiGroup: rbac.authorization.k8s.io
+# roleRef:
+#   kind: ClusterRole
+#   name: cluster-admin
+#   apiGroup: rbac.authorization.k8s.io
