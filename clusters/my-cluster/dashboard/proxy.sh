@@ -1,1 +1,1 @@
-k -n dashboard port-forward svc/my-dashboard-kong-proxy 8443:443
+kubectl -n dashboard port-forward svc/my-dashboard-kong-proxy 8443:443
