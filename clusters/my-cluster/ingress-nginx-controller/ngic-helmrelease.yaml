@@ -15,5 +15,7 @@ spec:
   interval: 1h
   values:
     controller:
+      hostPort:
+        enabled: true
       service:
         type: ClusterIP
