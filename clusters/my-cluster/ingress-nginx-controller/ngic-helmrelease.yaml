@@ -11,5 +11,5 @@ spec:
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
-        name: nginx-ingress
+        name: ingress-nginx-hrepo
   interval: 1h
