@@ -13,3 +13,7 @@ spec:
         kind: HelmRepository
         name: ingress-nginx-hrepo
   interval: 1h
+  values:
+    controller:
+      service:
+        type: ClusterIP
