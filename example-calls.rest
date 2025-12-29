@@ -8,3 +8,6 @@ Host: podinfo.local
 GET https://localhost:8443/
 Host: dashboard.local
 
+### by subpath
+GET https://localhost:8443/dashboard/
+
