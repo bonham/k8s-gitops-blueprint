@@ -1,1 +1,1 @@
-kind create cluster --name kind --config kind-config.yaml
+kind create cluster --name mskind --config kind-config.yaml
