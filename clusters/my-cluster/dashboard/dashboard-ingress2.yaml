@@ -5,21 +5,11 @@ metadata:
   namespace: dashboard
   annotations:
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
-  - host: dashboard.local
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: my-dashboard-kong-proxy
-            port:
-              number: 443
-  - host: "localhost"
-    http:
+    - http:
       paths:
       - path: /dashboard
         pathType: Prefix
