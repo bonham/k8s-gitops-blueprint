@@ -5,19 +5,16 @@ metadata:
   namespace: dashboard
   annotations:
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
-    nginx.ingress.kubernetes.io/rewrite-target: /
     nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
     nginx.ingress.kubernetes.io/configuration-snippet: |
-      # If request does NOT start with /dashboard, rewrite it
-      if ($request_uri !~ "^/dashboard") {
-        rewrite ^/(.*)$ /dashboard/$1 break;
-      }
+      rewrite ^/(.*)$ /dashboard/$1 break;
 spec:
   ingressClassName: nginx
   rules:
   - http:
       paths:
-      - path: /dashboard
+      - path: /dashboard(/|$)(.*)
         pathType: Prefix
         backend:
           service:
