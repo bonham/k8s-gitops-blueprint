@@ -1,0 +1,10 @@
+### go through ingress / gateway
+
+### for podinfo
+GET http://localhost:8080/
+Host: podinfo.local
+
+### for dashboard
+GET https://localhost:8443/
+Host: dashboard.local
+
