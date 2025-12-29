@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-dashboard-kubernetes-dashboard-web
+  namespace: dashboard
+spec:
+  template:
+    spec:
+      containers:
+      - name: kubernetes-dashboard
+        args:
+        - --namespace=dashboard
+        - --base-path=/dashboard
