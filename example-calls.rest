@@ -5,6 +5,10 @@ GET http://localhost:8080/
 Host: podinfo.local
 
 ### for dashboard
+### REST version:
 GET https://localhost:8443/
 Host: dashboard.local
+
+### Browser version - hosts file modified
+GET https://dashboard.local:8443/
 
