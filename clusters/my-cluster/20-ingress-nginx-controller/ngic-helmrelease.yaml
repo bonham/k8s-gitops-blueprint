@@ -1,21 +1,21 @@
 ---
 # apiVersion: helm.toolkit.fluxcd.io/v2
-kind: HelmRelease
-metadata:
-  name: my-ingress-nginx
-  namespace: ingress-nginx
-spec:
-  chart:
-    spec:
-      chart: ingress-nginx
-      reconcileStrategy: ChartVersion
-      sourceRef:
-        kind: HelmRepository
-        name: ingress-nginx-hrepo
-  interval: 1h
-  values:
-    controller:
-      hostPort:
-        enabled: true
-      service:
-        type: ClusterIP
+# kind: HelmRelease
+# metadata:
+#   name: my-ingress-nginx
+#   namespace: ingress-nginx
+# spec:
+#   chart:
+#     spec:
+#       chart: ingress-nginx
+#       reconcileStrategy: ChartVersion
+#       sourceRef:
+#         kind: HelmRepository
+#         name: ingress-nginx-hrepo
+#   interval: 1h
+#   values:
+#     controller:
+#       hostPort:
+#         enabled: true
+#       service:
+#         type: ClusterIP
