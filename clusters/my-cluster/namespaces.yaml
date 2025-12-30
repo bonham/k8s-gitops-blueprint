@@ -41,9 +41,3 @@ metadata:
   labels:
     name: infra
 ---
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: traefik
-  labels:
-    name: traefik
