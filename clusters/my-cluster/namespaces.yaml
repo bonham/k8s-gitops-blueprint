@@ -39,3 +39,10 @@ metadata:
   name: gateway-system
   labels:
     name: gateway-system
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nginx-gateway
+  labels:
+    name: nginx-gateway
