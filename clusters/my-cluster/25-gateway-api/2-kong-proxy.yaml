@@ -1,31 +1,31 @@
-apiVersion: apps/v1
-kind: DaemonSet
-metadata:
-  name: kong-proxy
-  namespace: kong-system
-spec:
-  selector:
-    matchLabels:
-      app: kong
-  template:
-    metadata:
-      labels:
-        app: kong
-    spec:
-      containers:
-      - name: proxy
-        image: kong/kong-gateway:3.6
-        env:
-        - name: KONG_DATABASE
-          value: "off"
-        - name: KONG_PROXY_LISTEN
-          value: "0.0.0.0:80, 0.0.0.0:443 ssl"
-        - name: KONG_ADMIN_LISTEN
-          value: "off"
-        ports:
-        - name: http
-          containerPort: 80
-          hostPort: 80
-        - name: https
-          containerPort: 443
-          hostPort: 443
+# apiVersion: apps/v1
+# kind: DaemonSet
+# metadata:
+#   name: kong-proxy
+#   namespace: kong-system
+# spec:
+#   selector:
+#     matchLabels:
+#       app: kong
+#   template:
+#     metadata:
+#       labels:
+#         app: kong
+#     spec:
+#       containers:
+#       - name: proxy
+#         image: kong/kong-gateway:3.6
+#         env:
+#         - name: KONG_DATABASE
+#           value: "off"
+#         - name: KONG_PROXY_LISTEN
+#           value: "0.0.0.0:80, 0.0.0.0:443 ssl"
+#         - name: KONG_ADMIN_LISTEN
+#           value: "off"
+#         ports:
+#         - name: http
+#           containerPort: 80
+#           hostPort: 80
+#         - name: https
+#           containerPort: 443
+#           hostPort: 443
