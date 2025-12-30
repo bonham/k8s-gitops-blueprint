@@ -1,29 +1,29 @@
-# repo
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: GitRepository
-metadata:
-  name: kong-gateway-operator
-  namespace: kong-system
-spec:
-  interval: 1h
-  url: https://github.com/Kong/gateway-operator
-  ref:
-    tag: v2.0.6
+# # repo
+# apiVersion: source.toolkit.fluxcd.io/v1
+# kind: GitRepository
+# metadata:
+#   name: kong-gateway-operator
+#   namespace: kong-system
+# spec:
+#   interval: 1h
+#   url: https://github.com/Kong/gateway-operator
+#   ref:
+#     tag: v2.0.6
 
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
-  name: kong-gateway-operator
-  namespace: flux-system    
-spec:
-  interval: 1h
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: kong-gateway-operator
-    namespace: kong-system
-  path: "./config"
-  targetNamespace: kong-system
-  wait: true
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1
+# kind: Kustomization
+# metadata:
+#   name: kong-gateway-operator
+#   namespace: flux-system    
+# spec:
+#   interval: 1h
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: kong-gateway-operator
+#     namespace: kong-system
+#   path: "./config"
+#   targetNamespace: kong-system
+#   wait: true
 
