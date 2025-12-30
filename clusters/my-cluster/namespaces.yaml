@@ -33,12 +33,13 @@ metadata:
   labels:
     name: ingress-nginx
 ---
+### namespace for cross namespace gateway objects
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: gateway-system
+  name: infra
   labels:
-    name: gateway-system
+    name: infra
 ---
 apiVersion: v1
 kind: Namespace
