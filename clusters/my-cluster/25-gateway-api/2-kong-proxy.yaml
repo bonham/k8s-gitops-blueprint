@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: kong-daemonset
+  name: kong-proxy
   namespace: kong-system
 spec:
   selector:
