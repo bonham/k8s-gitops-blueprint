@@ -23,7 +23,7 @@ spec:
     kind: GitRepository
     name: kong-gateway-operator
     namespace: kong-system
-  path: "./config/samples"
+  path: "./config"
   targetNamespace: kong-system
   wait: true
 
