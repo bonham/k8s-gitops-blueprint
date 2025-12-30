@@ -6,7 +6,7 @@ metadata:
 spec:
   parentRefs:
     - name: kong-gw
-      namespace: kong
+      namespace: kong-system
   hostnames:
     - "podinfo.local"
   rules:
