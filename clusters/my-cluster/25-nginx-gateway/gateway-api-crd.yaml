@@ -21,5 +21,4 @@ spec:
     kind: GitRepository
     name: gateway-api
   path: "./config/crd/standard"
-  targetNamespace: gateway-system
 
