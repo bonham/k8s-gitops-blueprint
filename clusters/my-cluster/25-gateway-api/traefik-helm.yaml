@@ -18,6 +18,7 @@ spec:
         image: traefik:v3.0
         args:
           - "--api.insecure=true"
+          - "--experimental.kubernetesgateway=true"
           - "--providers.kubernetesgateway=true"
           - "--entrypoints.web.address=:80"
           - "--entrypoints.websecure.address=:443"
