@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: kong
-  namespace: kong
+  namespace: kong-system
 spec:
   selector:
     matchLabels:
