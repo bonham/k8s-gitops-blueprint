@@ -16,7 +16,7 @@ metadata:
 spec:
   chart:
     spec:
-      chart: kong/kong-operator
+      chart: kong-operator
       version: 1.0.2
       reconcileStrategy: ChartVersion
       sourceRef:
