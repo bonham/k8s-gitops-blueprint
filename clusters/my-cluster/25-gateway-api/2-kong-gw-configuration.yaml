@@ -1,0 +1,31 @@
+apiVersion: gateway-operator.konghq.com/v1alpha1
+kind: GatewayConfiguration
+metadata:
+  name: kong-gw-config
+  namespace: kong-system
+spec:
+  gatewayClassName: kong
+
+  controlPlane:
+    deployment:
+      type: Deployment
+    podTemplate:
+      containers:
+      - name: control-plane
+        image: kong/kong-gateway:3.8
+        env:
+        - name: KONG_DATABASE
+          value: "off"
+
+  dataPlane:
+    deployment:
+      type: Deployment
+    service:
+      type: ClusterIP
+    podTemplate:
+      containers:
+      - name: proxy
+        image: kong/kong-gateway:3.8
+        env:
+        - name: KONG_DATABASE
+          value: "off"
