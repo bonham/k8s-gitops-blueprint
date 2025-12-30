@@ -15,11 +15,8 @@ metadata:
   name: my-ngf
   namespace: nginx-gateway
 spec:
-  chart:
-    spec:
-      chart: nginx-gateway-fabric
-      reconcileStrategy: ChartVersion
-      sourceRef:
-        kind: OCIRepository
-        name: ngf-repo
+  chartRef:
+      kind: OCIRepository
+      name: ngf-repo
   interval: 1h
+  values: {}
