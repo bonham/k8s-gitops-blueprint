@@ -23,3 +23,7 @@ spec:
     nginx:
       service:
         type: ClusterIP
+      container:
+        hostPorts:
+          - port: 80
+            containerPort: 80
