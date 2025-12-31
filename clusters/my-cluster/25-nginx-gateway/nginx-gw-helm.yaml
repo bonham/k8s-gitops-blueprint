@@ -1,0 +1,22 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: OCIRepository
+metadata:
+  name: ngf-repo
+  namespace: nginx-gateway
+spec:
+  interval: 1h
+  url: oci://ghcr.io/nginx/charts/nginx-gateway-fabric
+  ref:
+    tag: 2.3.0
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: my-ngf
+  namespace: nginx-gateway
+spec:
+  chartRef:
+      kind: OCIRepository
+      name: ngf-repo
+  interval: 1h
+  values: {}

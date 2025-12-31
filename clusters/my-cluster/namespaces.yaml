@@ -44,5 +44,6 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: kong-system
----
+  name: nginx-gateway
+  labels:
+    name: nginx-gateway
