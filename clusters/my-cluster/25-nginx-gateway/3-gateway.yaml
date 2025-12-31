@@ -1,26 +1,27 @@
 apiVersion: gateway.networking.k8s.io/v1
 kind: Gateway
 metadata:
-  name: podinfogw
-  namespace: podinfo2
+  name: shared-gateway
+  namespace: infra
 spec:
   gatewayClassName: nginx
   listeners:
-  - name: podinfo-gw-http
+  - name: http
     port: 80
     protocol: HTTP
----
-apiVersion: gateway.networking.k8s.io/v1
-kind: HTTPRoute
-metadata:
-  name: podinfo-http-route
-  namespace: podinfo2
-spec:
-  parentRefs:
-  - name: podinfogw
-  hostnames:
-  - "podinfo.local"
-  rules:
-  - backendRefs:
-    - name: my-podinfo
-      port: 9898
+    allowedRoutes:
+      namespaces:
+        from: Selector
+        nodeSelector:
+          matchLabels:
+            shared-gateway-access: true
+  # - name: https
+  #   port: 443
+  #   protocol: HTTPS
+  #   allowedRoutes:
+  #     namespaces:
+  #       from: Selector
+  #       nodeSelector:
+  #         matchLabels:
+  #           shared-gateway-access: true
+

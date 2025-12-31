@@ -11,6 +11,7 @@ metadata:
   name: dashboard
   labels:
     name: dashboard
+    shared-gateway-access: "true"
 ---
 apiVersion: v1
 kind: Namespace
@@ -40,6 +41,7 @@ metadata:
   name: infra
   labels:
     name: infra
+    shared-gateway-access: "true"
 ---
 apiVersion: v1
 kind: Namespace
