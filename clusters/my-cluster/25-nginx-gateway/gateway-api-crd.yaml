@@ -20,5 +20,5 @@ spec:
   sourceRef:
     kind: GitRepository
     name: gateway-api
-  path: "./kustomization.yaml"
+  path: "./config/crd/kustomization.yaml"
 
