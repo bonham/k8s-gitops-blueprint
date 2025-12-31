@@ -12,16 +12,16 @@ spec:
     allowedRoutes:
       namespaces:
         from: Selector
-        nodeSelector:
+        selector:
           matchLabels:
             shared-gateway-access: true
-  - name: https
-    port: 443
-    protocol: HTTPS
-    allowedRoutes:
-      namespaces:
-        from: Selector
-        nodeSelector:
-          matchLabels:
-            shared-gateway-access: true
+  # - name: https
+  #   port: 443
+  #   protocol: HTTPS
+  #   allowedRoutes:
+  #     namespaces:
+  #       from: Selector
+  #       nodeSelector:
+  #         matchLabels:
+  #           shared-gateway-access: true
 
