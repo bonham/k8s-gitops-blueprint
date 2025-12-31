@@ -4,6 +4,8 @@ metadata:
   name: podinfo2
   labels:
     name: podinfo2
+    shared-gateway-access: "true"
+
 ---
 apiVersion: v1
 kind: Namespace

@@ -1,5 +1,8 @@
 ### go through ingress / gateway
 
+### generic
+GET http://localhost:8080/
+
 ### for podinfo
 GET http://localhost:8080/
 Host: podinfo.local
