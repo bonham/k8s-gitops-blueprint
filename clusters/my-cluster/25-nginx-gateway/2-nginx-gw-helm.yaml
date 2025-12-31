@@ -27,3 +27,5 @@ spec:
         hostPorts:
           - port: 80
             containerPort: 80
+          - port: 443
+            containerPort: 443
