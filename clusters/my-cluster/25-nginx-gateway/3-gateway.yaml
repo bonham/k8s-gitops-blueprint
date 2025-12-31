@@ -14,7 +14,7 @@ spec:
         from: Selector
         selector:
           matchLabels:
-            shared-gateway-access: true
+            shared-gateway-access: "true"
   # - name: https
   #   port: 443
   #   protocol: HTTPS
