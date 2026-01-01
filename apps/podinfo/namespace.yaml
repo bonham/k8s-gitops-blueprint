@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: podinfo2
+  labels:
+    name: podinfo2
+    shared-gateway-access: "true"
+
+---

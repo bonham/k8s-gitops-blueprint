@@ -1,0 +1,8 @@
+### namespace for cross namespace gateway objects
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: infra
+  labels:
+    name: infra
+    shared-gateway-access: "true"
