@@ -1,0 +1,38 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: gw-api-crd
+  namespace: flux-system
+spec:
+  interval: 1h
+  path: ./components/20-gw-api-crd
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: gw-helm
+  namespace: flux-system
+spec:
+  interval: 1h
+  path: ./components/22-gw-helm
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: gateway
+  namespace: flux-system
+spec:
+  interval: 1h
+  path: ./components/24-gateway
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
