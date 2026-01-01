@@ -15,13 +15,12 @@ spec:
         selector:
           matchLabels:
             shared-gateway-access: "true"
-  - name: https
+  - name: https-passthrough
     port: 443
-    protocol: HTTPS
+    protocol: TLS
     allowedRoutes:
       namespaces:
         from: Selector
         selector:
           matchLabels:
             shared-gateway-access: "true"
-
