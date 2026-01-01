@@ -9,7 +9,7 @@ spec:
   - name: shared-gateway
     namespace: infra
   hostnames:
-    "dashboard.local"
+  - "dashboard.local"
   rules:
   - backendRefs:
     - name: my-dashboard-kong-proxy
