@@ -21,9 +21,9 @@ spec:
     allowedRoutes:
       namespaces:
         from: Selector
-        nodeSelector:
+        selector:
           matchLabels:
-            shared-gateway-access: true
+            shared-gateway-access: "true"
     tls:
       mode: Passthrough
 
