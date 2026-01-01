@@ -20,6 +20,9 @@ spec:
       name: ngf-repo
   interval: 1h
   values:
+    nginxGateway:
+      gwAPIExperimentalFeatures:
+        enable: true
     nginx:
       service:
         type: ClusterIP
