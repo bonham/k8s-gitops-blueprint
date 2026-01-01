@@ -1,4 +1,4 @@
-### gateway components - they have dependencies
+### gateway components - depend on CRDs
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
@@ -42,6 +42,23 @@ spec:
     kind: GitRepository
     name: flux-system
 ---
+### apps
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: apps
+  namespace: flux-system
+spec:
+  interval: 1h
+  path: ./apps
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+
+### Routes depend on gateway and apps
+
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
@@ -58,20 +75,8 @@ spec:
     kind: GitRepository
     name: flux-system
 ---
-### Other components
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
-  name: apps
-  namespace: flux-system
-spec:
-  interval: 1h
-  path: ./apps
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
----
+
+### other components without dependencies
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
