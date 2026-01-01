@@ -15,6 +15,9 @@ metadata:
   name: my-ngf
   namespace: nginx-gateway
 spec:
+  dependsOn:
+  - name: gateway-api
+    namespace: flux-system
   chartRef:
       kind: OCIRepository
       name: ngf-repo

@@ -3,6 +3,8 @@ kind: Gateway
 metadata:
   name: shared-gateway
   namespace: infra
+  annotations:
+    depends-on: flux-system/gateway-api
 spec:
   gatewayClassName: nginx
   listeners:
