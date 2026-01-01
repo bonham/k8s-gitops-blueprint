@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1h
-  path: ./components/20-gw-api-crd
+  path: ./gateway-components/20-gw-api-crd
   prune: true
   sourceRef:
     kind: GitRepository
@@ -18,7 +18,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1h
-  path: ./components/22-gw-helm
+  path: ./gateway-components/22-gw-helm
   prune: true
   dependsOn:
     - name: gw-api-crd
@@ -33,7 +33,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1h
-  path: ./components/24-gateway
+  path: ./gateway-components/24-gateway
   prune: true
   dependsOn:
     - name: gw-helm
@@ -48,7 +48,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1h
-  path: ./components/30-routes
+  path: ./gateway-components/30-routes
   prune: true
   dependsOn:
     - name: gateway
