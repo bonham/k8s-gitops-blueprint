@@ -4,8 +4,6 @@ kind: HTTPRoute
 metadata:
   name: podinfo
   namespace: podinfo2
-  annotations:
-    depends-on: flux-system/gateway-api
 spec:
   parentRefs:
   - name: shared-gateway
