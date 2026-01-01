@@ -8,6 +8,8 @@ spec:
   parentRefs:
   - name: shared-gateway
     namespace: infra
+  hostnames:
+    "dashboard.local"
   rules:
   - backendRefs:
     - name: my-dashboard-kong-proxy
