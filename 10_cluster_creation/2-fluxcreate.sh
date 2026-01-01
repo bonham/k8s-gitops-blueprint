@@ -1,3 +1,4 @@
+# create token here: https://github.com/settings/tokens
 flux bootstrap github \
   --owner=bonham \
   --repository=k8s-gitops-blueprint \
