@@ -1,0 +1,14 @@
+# ---
+# apiVersion: gateway.networking.k8s.io/v1
+# kind: HTTPRoute
+# metadata:
+#   name: dashboard
+#   namespace: dashboard
+# spec:
+#   parentRefs:
+#   - name: shared-gateway
+#     namespace: infra
+#   rules:
+#   - backendRefs:
+#     - name: my-dashboard-kong-proxy
+#       port: 443
